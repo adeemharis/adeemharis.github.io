@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog — Adeem Haris</title>
+    <meta name="description" content="Articles and insights by Adeem Haris on AI, Deep Learning, and Technology.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="theme.js"></script>
+</head>
+
+<body class="blog-listing-page">
+    <!-- ======= Navigation ======= -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">AH<span class="accent">.</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#experience">Experience</a></li>
+                <li><a href="index.html#education">Education</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#achievements">Achievements</a></li>
+                <li><a href="blogs.html" class="active">Blog</a></li>
+                <li><a href="index.html#contact" class="nav-cta">Contact</a></li>
+                <!-- Theme Toggle -->
+                <li class="theme-toggle">
+                    <button class="theme-toggle-btn" data-theme="light" title="Light Mode">
+                        <span class="material-icons-outlined">light_mode</span>
+                    </button>
+                    <button class="theme-toggle-btn" data-theme="dark" title="Dark Mode">
+                        <span class="material-icons-outlined">dark_mode</span>
+                    </button>
+                    <button class="theme-toggle-btn" data-theme="system" title="System Preference">
+                        <span class="material-icons-outlined">settings_brightness</span>
+                    </button>
+                </li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Blog Listing Page -->
+    <main class="blog-listing-page">
+        <div class="container">
+            <div class="section-ornament ornament-tr">BLOG_SYS_v2.0</div>
+            <!-- Header -->
+            <div class="blog-listing-header">
+                <div class="blog-listing-header-text">
+                    <h1>Blog</h1>
+                    <p>Thoughts, tutorials, and insights on AI, engineering, and technology.</p>
+                </div>
+                <div class="blog-listing-header-actions">
+                    <button class="admin-login-btn" id="adminLoginBtn" title="Admin Login">
+                        <span class="material-icons-outlined">lock</span>
+                    </button>
+                    <button class="admin-logout-btn" id="adminLogoutBtn" style="display:none" title="Logout">
+                        <span class="admin-indicator" id="adminIndicator"></span>
+                        <span class="material-icons-outlined">logout</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Admin Controls (hidden by default) -->
+            <div class="admin-controls" id="adminControls">
+                <button class="btn btn-primary" id="writeNewBtn">
+                    <span class="material-icons-outlined">edit_note</span> Write New Post
+                </button>
+            </div>
+
+            <!-- Write Form (hidden by default) -->
+            <div class="blog-write-section" id="blogWriteSection">
+                <h2 id="blogWriteTitle">Write New Article</h2>
+                <form id="blogWriteForm">
+                    <input type="hidden" id="writePostId">
+                    <div class="form-group">
+                        <label for="writePostTitle">Title</label>
+                        <input type="text" id="writePostTitle" placeholder="Enter article title..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="writePostTags">Tags <span class="hint">(comma-separated)</span></label>
+                        <input type="text" id="writePostTags" placeholder="e.g. AI, Deep Learning, Python">
+                    </div>
+                    <div class="form-group">
+                        <label for="writePostExcerpt">Excerpt</label>
+                        <textarea id="writePostExcerpt" rows="2" placeholder="Brief summary..." required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="writePostContent">Content</label>
+                        <textarea id="writePostContent" rows="14" placeholder="Write your article content..."
+                            required></textarea>
+                    </div>
+                    <div class="blog-write-actions">
+                        <button type="button" class="btn btn-ghost" id="cancelWriteBtn">Cancel</button>
+                        <button type="submit" class="btn btn-primary">
+                            <span class="material-icons-outlined">publish</span> Publish
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Blog Grid -->
+            <div class="blog-listing-grid" id="blogListingGrid">
+                <!-- Rendered by JS -->
+            </div>
+            <p class="blog-listing-empty" id="blogListingEmpty">
+                <span class="material-icons-outlined">article</span>
+                No articles published yet. Check back soon!
+            </p>
+        </div>
+    </main>
+
+    <!-- Admin Login Modal -->
+    <div class="modal-overlay" id="adminLoginModal">
+        <div class="modal admin-modal">
+            <div class="modal-header">
+                <h3><span class="material-icons-outlined" style="color:var(--accent);margin-right:8px">shield</span>
+                    Admin Login</h3>
+                <button class="modal-close" id="adminModalClose" aria-label="Close">
+                    <span class="material-icons-outlined">close</span>
+                </button>
+            </div>
+            <form id="adminLoginForm">
+                <div class="form-group">
+                    <label for="adminPassword">Password</label>
+                    <input type="password" id="adminPassword" placeholder="Enter admin password..." required
+                        autocomplete="current-password">
+                </div>
+                <p class="admin-error" id="adminError" style="display:none">Incorrect password. Try again.</p>
+                <button type="submit" class="btn btn-primary btn-full">
+                    <span class="material-icons-outlined">login</span> Login
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <a href="index.html" class="footer-logo">AH<span class="accent">.</span></a>
+                <div class="footer-links">
+                    <a href="index.html#about">About</a>
+                    <a href="index.html#projects">Projects</a>
+                    <a href="blogs.html">Blog</a>
+                    <a href="index.html#contact">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="mailto:adeemharis@gmail.com" aria-label="Email"><span
+                            class="material-icons-outlined">mail</span></a>
+                    <a href="https://github.com/adeemharis" target="_blank" rel="noopener" aria-label="GitHub"><span
+                            class="material-icons-outlined">code</span></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Adeem Haris. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <script src="blog-listing.js"></script>
+</body>
+
+</html>
