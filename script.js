@@ -162,8 +162,8 @@ if (canvas) {
     const heroContent = document.querySelector('.hero-content');
     if (heroContent) {
         window.addEventListener('mousemove', (e) => {
-            const moveX = (e.clientX - window.innerWidth / 2) * 0.01;
-            const moveY = (e.clientY - window.innerHeight / 2) * 0.01;
+            const moveX = (e.clientX - window.innerWidth / 2) * 0.005;
+            const moveY = (e.clientY - window.innerHeight / 2) * 0.005;
             heroContent.style.transform = `translate(${moveX}px, ${moveY}px)`;
         });
     }
