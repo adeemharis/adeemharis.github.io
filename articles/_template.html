@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{TITLE}} — Adeem Haris</title>
+    <meta name="description" content="{{EXCERPT}}">
+    <link rel="canonical" href="https://adeemharis.github.io/articles/{{SLUG}}.html">
+    
+    <!-- Open Graph / Social Previews -->
+    <meta property="og:title" content="{{TITLE}} — Adeem Haris">
+    <meta property="og:description" content="{{EXCERPT}}">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://adeemharis.github.io/articles/{{SLUG}}.html">
+    <meta name="twitter:card" content="summary">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="icon" type="image/png" sizes="64x64" href="../favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+
+    <!-- Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <script src="../theme.js"></script>
+</head>
+<body>
+    <a href="#articleContent" class="skip-link">Skip to article content</a>
+
+    <!-- ======= Navigation ======= -->
+    <header id="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-brand">
+                <span class="nav-brand-logo" aria-hidden="true">AH</span>
+                <span class="nav-brand-name">Adeem Haris</span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#education">Education</a></li>
+                <li><a href="../index.html#interests">Interests</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../blogs.html" class="active">Writing</a></li>
+                <li><a href="../Resume_Adeem_IITD.pdf" target="_blank" rel="noopener">Resume [PDF]</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="theme-toggle-group" role="group" aria-label="Theme preference">
+                    <button class="theme-toggle-btn" data-theme="light" title="Light Theme" aria-label="Light Theme">
+                        <span class="material-icons-outlined">light_mode</span>
+                    </button>
+                    <button class="theme-toggle-btn" data-theme="dark" title="Dark Theme" aria-label="Dark Theme">
+                        <span class="material-icons-outlined">dark_mode</span>
+                    </button>
+                    <button class="theme-toggle-btn" data-theme="system" title="System Theme" aria-label="System Theme">
+                        <span class="material-icons-outlined">settings_brightness</span>
+                    </button>
+                </div>
+                <button class="nav-toggle-btn" id="navToggle" aria-label="Toggle navigation menu">
+                    <span class="material-icons-outlined">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ======= Article Container ======= -->
+    <main class="container section" id="articleContent">
+        <div class="prose-container">
+            <header class="article-header">
+                <a href="../blogs.html" class="article-back-link">
+                    <span class="material-icons-outlined" style="font-size:16px;">arrow_back</span> Back to Writing & Notes
+                </a>
+                <h1 class="article-main-title">{{TITLE}}</h1>
+                <div class="article-meta-bar">
+                    <span><time datetime="{{DATE}}">{{FORMATTED_DATE}}</time></span>
+                    <span>•</span>
+                    <span class="article-card-category">{{CATEGORY}}</span>
+                    <span>•</span>
+                    <span>{{READING_TIME}}</span>
+                </div>
+            </header>
+
+            <article class="article-body">
+                <!-- Content begins here -->
+                <p class="article-lead">
+                    {{LEAD_PARAGRAPH}}
+                </p>
+
+                <h2>1. Background & Problem Formulation</h2>
+                <p>
+                    Article section content goes here...
+                </p>
+
+                <h2>2. Architecture & Implementation</h2>
+                <pre><code class="language-cpp">// Code snippet example
+void kernel() {
+    // ...
+}</code></pre>
+
+                <h2>3. Key Takeaways & Discussion</h2>
+                <p>
+                    Discussion and concluding remarks...
+                </p>
+                <!-- Content ends here -->
+            </article>
+
+            <hr>
+
+            <!-- Author Colophon -->
+            <aside class="author-colophon" style="font-size: var(--text-sm); color: var(--text-secondary); line-height: 1.6;">
+                <p>
+                    <strong>Adeem Haris</strong> is a postgraduate student in Cybersecurity at the Indian Institute of Technology Delhi, researching AI Security, machine learning robustness, and high-performance computing.
+                </p>
+                <p style="margin-top: var(--space-2);">
+                    <a href="../blogs.html">← View all research notes and writing</a>
+                </p>
+            </aside>
+        </div>
+    </main>
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="container footer-content">
+            <div class="footer-colophon">
+                Adeem Haris · 2026
+            </div>
+            <div class="footer-links">
+                <a href="../index.html">Home</a>
+                <a href="../blogs.html">Writing</a>
+                <a href="https://github.com/adeemharis" target="_blank" rel="noopener">GitHub</a>
+                <a href="mailto:adeemharis@gmail.com">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile navigation toggle
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+        if (navToggle && navMenu) {
+            navToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+[
+  {
+    "id": "accelerating-deep-learning-cuda",
+    "slug": "accelerating-deep-learning-cuda",
+    "title": "Benchmarking & Accelerating Deep Learning Inference with CUDA",
+    "date": "2026-04-12",
+    "category": "High Performance Computing",
+    "tags": ["CUDA", "C++", "GPU", "Deep Learning", "Systems"],
+    "readingTime": "6 min read",
+    "excerpt": "A technical breakdown of forward-pass bottlenecks in header-only C++ inference libraries, profiling execution profiles, and writing custom GPU kernels for compute-heavy layers.",
+    "url": "articles/accelerating-deep-learning-cuda.html"
+  },
+  {
+    "id": "scoped-enterprise-ai-agent-authentication",
+    "slug": "scoped-enterprise-ai-agent-authentication",
+    "title": "Designing Scoped Credential Systems for Enterprise AI Agents",
+    "date": "2026-08-20",
+    "category": "AI Security",
+    "tags": ["AI Security", "OAuth2", "PAM", "Systems", "Autonomous Agents"],
+    "readingTime": "8 min read",
+    "excerpt": "An architectural pattern for short-lived, permission-bound credential brokers that prevent privilege escalation in autonomous agentic pipelines.",
+    "url": "articles/scoped-enterprise-ai-agent-authentication.html"
+  }
+]

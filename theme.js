@@ -1,44 +1,41 @@
-/* ========================================
-   Theme Management
-   Supports: dark, light, system (auto)
-   ======================================== */
+/* ==========================================================================
+   Theme Management — Adeem Haris Academic Portfolio
+   Supports: 'light' (default), 'dark', 'system' (OS preference)
+   ========================================================================== */
 
 (function () {
     const THEME_KEY = 'adeem_theme';
 
-    // Get saved theme or default to 'dark'
-    function getSavedTheme() {
-        return localStorage.getItem(THEME_KEY) || 'dark';
+    function getSystemTheme() {
+        return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+            ? 'dark'
+            : 'light';
     }
 
-    // Apply theme to document
+    function getSavedTheme() {
+        return localStorage.getItem(THEME_KEY) || 'system';
+    }
+
     function applyTheme(theme) {
-        document.documentElement.setAttribute('data-theme', theme);
+        const effectiveTheme = theme === 'system' ? getSystemTheme() : theme;
+        document.documentElement.setAttribute('data-theme', effectiveTheme);
         localStorage.setItem(THEME_KEY, theme);
         updateToggleButtons(theme);
-        updateParticleColor(theme);
     }
 
-    // Update toggle button active states
     function updateToggleButtons(theme) {
         document.querySelectorAll('.theme-toggle-btn').forEach(btn => {
-            btn.classList.toggle('active', btn.dataset.theme === theme);
+            const isActive = btn.dataset.theme === theme;
+            btn.classList.toggle('active', isActive);
+            btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
         });
     }
 
-    // Update particle canvas color for theme
-    function updateParticleColor(theme) {
-        const style = getComputedStyle(document.documentElement);
-        const colorStr = style.getPropertyValue('--particle-color').trim();
-        if (window.updateParticleSystemColor && colorStr) {
-            window.updateParticleSystemColor(colorStr);
-        }
-    }
+    // Apply immediately to prevent Flash of Unstyled Theme (FOUC)
+    const initialTheme = getSavedTheme();
+    applyTheme(initialTheme);
 
-    // Initialize: apply saved theme immediately (before render)
-    applyTheme(getSavedTheme());
-
-    // Bind toggle buttons after DOM loads
+    // Bind event listeners when DOM is loaded
     document.addEventListener('DOMContentLoaded', () => {
         updateToggleButtons(getSavedTheme());
 
@@ -49,10 +46,12 @@
         });
     });
 
-    // Listen for system theme changes when in 'system' mode
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-        if (getSavedTheme() === 'system') {
-            updateParticleColor('system');
-        }
-    });
+    // Listen for OS system theme changes
+    if (window.matchMedia) {
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+            if (getSavedTheme() === 'system') {
+                applyTheme('system');
+            }
+        });
+    }
 })();

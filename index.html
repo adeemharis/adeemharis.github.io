@@ -4,13 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adeem Haris — AI Engineer & Technical Lead</title>
+    <title>Adeem Haris</title>
     <meta name="description"
-        content="Personal portfolio of Adeem Haris — AI Engineer, IIT Jodhpur Alumnus, Technical Lead at HCLTech. Expertise in Deep Learning, GenAI, NLP, and Computer Vision.">
+        content="Personal website of Adeem Haris. Postgraduate student in Cybersecurity at IIT Delhi with a background in AI and systems engineering.">
+    <link rel="canonical" href="https://adeemharis.github.io/">
+
+    <!-- Open Graph / Social Previews -->
+    <meta property="og:title" content="Adeem Haris">
+    <meta property="og:description"
+        content="Personal website of Adeem Haris. Postgraduate student in Cybersecurity at IIT Delhi with a background in AI and systems engineering.">
+    <meta property="og:image" content="https://adeemharis.github.io/assets/profile.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://adeemharis.github.io/">
+    <meta name="twitter:card" content="summary">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+    <!-- Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -18,468 +35,504 @@
 </head>
 
 <body>
+    <a href="#mainContent" class="skip-link">Skip to main content</a>
+
     <!-- ======= Navigation ======= -->
-    <nav id="navbar">
+    <header id="navbar">
         <div class="nav-container">
-            <a href="#hero" class="nav-logo">AH<span class="accent">.</span></a>
-            <ul class="nav-links" id="navLinks">
+            <a href="#about" class="nav-brand">
+                <span class="nav-brand-logo" aria-hidden="true">AH</span>
+                <span class="nav-brand-name">Adeem Haris</span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
                 <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
                 <li><a href="#education">Education</a></li>
-                <li><a href="#skills">Skills</a></li>
+                <li><a href="#interests">Interests</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#achievements">Achievements</a></li>
-                <li><a href="blogs.html">Blog</a></li>
-                <li><a href="#contact" class="nav-cta">Contact</a></li>
-                <!-- Theme Toggle -->
-                <li class="theme-toggle">
-                    <button class="theme-toggle-btn" data-theme="light" title="Light Mode">
+                <li><a href="#writing">Writing</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="Resume_Adeem_IITD.pdf" target="_blank" rel="noopener" class="nav-resume-btn">CV</a>
+                <div class="theme-toggle-group" role="group" aria-label="Theme preference">
+                    <button class="theme-toggle-btn" data-theme="light" title="Light Theme" aria-label="Light Theme">
                         <span class="material-icons-outlined">light_mode</span>
                     </button>
-                    <button class="theme-toggle-btn" data-theme="dark" title="Dark Mode">
+                    <button class="theme-toggle-btn" data-theme="dark" title="Dark Theme" aria-label="Dark Theme">
                         <span class="material-icons-outlined">dark_mode</span>
                     </button>
-                    <button class="theme-toggle-btn" data-theme="system" title="System Preference">
+                    <button class="theme-toggle-btn" data-theme="system" title="System Theme" aria-label="System Theme">
                         <span class="material-icons-outlined">settings_brightness</span>
                     </button>
-                </li>
-            </ul>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
-    </nav>
-
-    <!-- ======= Hero ======= -->
-    <section id="hero">
-        <div class="section-ornament ornament-tr">0xAD 0xEE 0x4D</div>
-        <div class="section-ornament ornament-bl">34.678° N, 73.075° E</div>
-        <canvas id="particleCanvas"></canvas>
-        <div class="scanline"></div>
-        <div class="hero-content reveal" data-tilt data-tilt-max="3" data-tilt-speed="600" data-tilt-perspective="1200">
-            <p class="hero-greeting terminal-prompt">// engineering intelligence</p>
-            <h1 class="hero-name">Adeem Haris</h1>
-            <p class="hero-title">AI Engineer & Technical Lead</p>
-            <p class="hero-tagline">Designing intelligent systems at the intersection of deep learning, distributed
-                computing, and real-world impact.</p>
-            <div class="hero-btns">
-                <a href="#projects" class="btn btn-primary">
-                    <span class="material-icons-outlined">code</span> View Projects
-                </a>
-                <a href="#contact" class="btn btn-outline">
-                    <span class="material-icons-outlined">mail</span> Contact Me
-                </a>
+                </div>
+                <button class="nav-toggle-btn" id="navToggle" aria-label="Toggle navigation menu">
+                    <span class="material-icons-outlined">menu</span>
+                </button>
             </div>
         </div>
-        <a href="#about" class="scroll-indicator" aria-label="Scroll down">
-            <span class="material-icons-outlined">expand_more</span>
-        </a>
-    </section>
+    </header>
 
-    <!-- ======= About ======= -->
-    <section id="about" class="section">
-        <div class="container">
-            <h2 class="section-title reveal">About Me</h2>
-            <div class="about-grid reveal">
-                <div class="about-image">
-                    <div class="about-image-wrapper">
-                        <img src="assets/profile.jpg" alt="Adeem Haris" loading="lazy">
-                        <div class="about-image-border"></div>
+    <main id="mainContent">
+        <!-- ======= About / Intro ======= -->
+        <section id="about" class="section hero-section">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-primary">
+                        <h1 class="hero-name">Adeem Haris</h1>
+                        <p class="hero-affiliation">
+                            M.Tech student in Cybersecurity at IIT Delhi
+                        </p>
+                        <p class="hero-bio">
+                            I am currently pursuing my Master's in Cybersecurity at IIT Delhi. My primary focus is on
+                            AI Security—understanding vulnerabilities in machine learning models, adversarial robustness,
+                            and building secure, dependable systems around AI pipelines.
+                        </p>
+                        <p class="hero-bio">
+                            Before this, I completed my B.Tech in Artificial Intelligence and Data Science at IIT Jodhpur
+                            with a minor in Mathematical and Computational Economics. After graduating, I worked as a
+                            Technical Lead (GenAI) at HCLTech, where I built enterprise automation tools, code review
+                            bots, and scoped access control systems for financial clients.
+                        </p>
+                        <div class="hero-links">
+                            <a href="Resume_Adeem_IITD.pdf" class="badge-pill badge-primary" target="_blank" rel="noopener">
+                                <span class="material-icons-outlined">description</span> Resume [PDF]
+                            </a>
+                            <a href="https://github.com/adeemharis" class="badge-pill" target="_blank" rel="noopener">
+                                <span class="material-icons-outlined">code</span> GitHub
+                            </a>
+                            <a href="https://www.linkedin.com/in/adeemharis/" class="badge-pill" target="_blank" rel="noopener">
+                                <span class="material-icons-outlined">link</span> LinkedIn
+                            </a>
+                            <a href="mailto:adeemharis@gmail.com" class="badge-pill">
+                                <span class="material-icons-outlined">mail</span> adeemharis@gmail.com
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hero-portrait">
+                        <div class="portrait-wrapper">
+                            <img src="assets/profile.jpg" alt="Adeem Haris" class="portrait-img" loading="eager">
+                        </div>
                     </div>
                 </div>
-                <div class="about-text">
-                    <p>I am an <strong>AI Engineer</strong> at HCLTech and an alumnus of <strong>IIT Jodhpur</strong>,
-                        where I earned my B.Tech in Artificial Intelligence & Data Science with a minor in Mathematical
-                        and Computational Economics.</p>
-                    <p>I specialize in designing, implementing, and optimizing machine learning models and AI solutions.
-                        My expertise spans <strong>Deep Learning, Generative AI, NLP, and Computer Vision</strong>.
-                        Currently, I lead GenAI initiatives at HCLTech for Western Union, architecting systems that
-                        leverage Large Language Models for enterprise-scale applications.</p>
-                    <p>With a strong foundation in Computer Science and Mathematics, I've consistently demonstrated
-                        excellence — securing top ranks in GATE, KVPY, and JEE Advanced.</p>
-                    <div class="about-stats">
-                        <div class="stat-item">
-                            <span class="stat-number">6+</span>
-                            <span class="stat-label">Languages</span>
+            </div>
+        </section>
+
+        <!-- ======= Education ======= -->
+        <section id="education" class="section">
+            <div class="container">
+                <h2 class="section-title">Education</h2>
+
+                <div class="education-list">
+                    <!-- IIT Delhi -->
+                    <div class="education-item">
+                        <div class="education-dates">
+                            <span>July 2026 — Present</span>
+                            <span class="education-status">Current</span>
                         </div>
-                        <div class="stat-item">
-                            <span class="stat-number">10+</span>
-                            <span class="stat-label">Technologies</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">4+</span>
-                            <span class="stat-label">Major Projects</span>
+                        <div class="education-details">
+                            <h3>Indian Institute of Technology Delhi</h3>
+                            <div class="education-degree">Master of Technology in Cybersecurity</div>
+                            <div class="education-subdegree">Delhi, India</div>
+                            <p class="education-desc">
+                                Core focus on securing AI and computing systems, network security, operating system
+                                isolation, and applied cryptography.
+                            </p>
                         </div>
                     </div>
-                    <a href="Adeem_Resume_IITJ.pdf" class="btn btn-primary" target="_blank" rel="noopener">
-                        <span class="material-icons-outlined">description</span> Download Resume
+
+                    <!-- IIT Jodhpur -->
+                    <div class="education-item">
+                        <div class="education-dates">
+                            <span>Dec 2021 — May 2025</span>
+                            <span class="education-status" style="color:var(--text-muted);">Completed</span>
+                        </div>
+                        <div class="education-details">
+                            <h3>Indian Institute of Technology Jodhpur</h3>
+                            <div class="education-degree">Bachelor of Technology in Artificial Intelligence and Data Science</div>
+                            <div class="education-subdegree">Minor in Mathematical &amp; Computational Economics · Jodhpur, India</div>
+                            <p class="education-desc">
+                                Coursework covering machine learning, deep learning, GPU programming, distributed
+                                systems, algorithms, and computational economics.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======= Research Interests ======= -->
+        <section id="interests" class="section">
+            <div class="container">
+                <h2 class="section-title">Research Interests</h2>
+                <p style="font-size: var(--text-base); color: var(--text-secondary); max-width: var(--prose-max-width); margin-bottom: var(--space-8);">
+                    I am interested in problems at the intersection of machine learning security and systems engineering.
+                </p>
+
+                <div class="interests-grid">
+                    <!-- Interest 1 -->
+                    <div class="interest-card">
+                        <div class="interest-card-header">
+                            <span class="material-icons-outlined">shield</span>
+                            <h3>AI Security &amp; Robustness</h3>
+                        </div>
+                        <p>
+                            Studying how neural networks behave under adversarial attacks, data poisoning, and model inversion,
+                            along with methods to evaluate and improve their robustness.
+                        </p>
+                        <div class="interest-tags">
+                            <span class="interest-tag">Adversarial ML</span>
+                            <span class="interest-tag">Model Robustness</span>
+                            <span class="interest-tag">Model Inversion</span>
+                        </div>
+                    </div>
+
+                    <!-- Interest 2 -->
+                    <div class="interest-card">
+                        <div class="interest-card-header">
+                            <span class="material-icons-outlined">lock</span>
+                            <h3>Agent Access Control &amp; System Security</h3>
+                        </div>
+                        <p>
+                            Designing least-privilege credential brokers and runtime sandboxes for autonomous AI agents
+                            to prevent privilege escalation and unauthorized tool execution.
+                        </p>
+                        <div class="interest-tags">
+                            <span class="interest-tag">Agent Security</span>
+                            <span class="interest-tag">OAuth2 / PAM</span>
+                            <span class="interest-tag">Least Privilege</span>
+                        </div>
+                    </div>
+
+                    <!-- Interest 3 -->
+                    <div class="interest-card">
+                        <div class="interest-card-header">
+                            <span class="material-icons-outlined">biotech</span>
+                            <h3>Applied Deep Learning</h3>
+                        </div>
+                        <p>
+                            Applying computer vision and generative models to diagnostic medical imaging, time-series
+                            disaggregation, and practical data analysis.
+                        </p>
+                        <div class="interest-tags">
+                            <span class="interest-tag">Computer Vision</span>
+                            <span class="interest-tag">PyTorch</span>
+                            <span class="interest-tag">Medical Imaging</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======= Experience ======= -->
+        <section id="experience" class="section">
+            <div class="container">
+                <h2 class="section-title">Experience</h2>
+
+                <div class="work-list">
+                    <!-- Experience 1: HCLTech -->
+                    <article class="work-item">
+                        <div class="work-header">
+                            <h3 class="work-title">Technical Lead — GenAI</h3>
+                            <span class="work-meta">Sep 2025 — Aug 2026 · Hyderabad, India</span>
+                        </div>
+                        <div class="work-role">HCLTech (Client: Western Union)</div>
+                        <p class="work-summary">
+                            Led GenAI engineering initiatives for a global financial services client:
+                        </p>
+                        <ul style="margin: 0 0 var(--space-4) var(--space-6); font-size: var(--text-sm); line-height: 1.65; color: var(--text-secondary);">
+                            <li style="margin-bottom: var(--space-2);">
+                                <strong>Scoped AI Agent Authentication</strong>: Designed and implemented a short-lived, permission-bound credential system (OAuth2/PAM-based) for autonomous enterprise agents, preventing privilege escalation while executing corporate tasks.
+                            </li>
+                            <li style="margin-bottom: var(--space-2);">
+                                <strong>AI Code Review Bot</strong>: Built an automated code review bot using LLMs integrated into the CI/CD pipeline, reducing manual review times and catching defects pre-merge.
+                            </li>
+                            <li style="margin-bottom: var(--space-2);">
+                                <strong>Internal Automation Platform</strong>: Developed a full-stack attendance and compliance platform with role-based dashboards and approval workflows.
+                            </li>
+                        </ul>
+                        <div class="work-footer">
+                            <div class="work-tech">
+                                <span class="tech-chip">Python</span>
+                                <span class="tech-chip">GenAI</span>
+                                <span class="tech-chip">OAuth2</span>
+                                <span class="tech-chip">PAM</span>
+                                <span class="tech-chip">CI/CD</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Experience 2: Weya.AI -->
+                    <article class="work-item">
+                        <div class="work-header">
+                            <h3 class="work-title">Machine Learning Intern</h3>
+                            <span class="work-meta">May 2024 — Jul 2024 · Remote</span>
+                        </div>
+                        <div class="work-role">Weya.AI</div>
+                        <p class="work-summary">
+                            Worked on energy disaggregation (Non-Intrusive Load Monitoring / NILM) for real-world client deployments:
+                        </p>
+                        <ul style="margin: 0 0 var(--space-4) var(--space-6); font-size: var(--text-sm); line-height: 1.65; color: var(--text-secondary);">
+                            <li style="margin-bottom: var(--space-2);">
+                                Built an end-to-end ML pipeline covering data collection, preprocessing, feature extraction, and cloud deployment.
+                            </li>
+                            <li style="margin-bottom: var(--space-2);">
+                                Researched and benchmarked generative architectures (VAEs and GANs) alongside sequence-to-point neural networks for decomposing household energy usage.
+                            </li>
+                        </ul>
+                        <div class="work-footer">
+                            <div class="work-tech">
+                                <span class="tech-chip">Python</span>
+                                <span class="tech-chip">PyTorch</span>
+                                <span class="tech-chip">Generative Models</span>
+                                <span class="tech-chip">NILM</span>
+                            </div>
+                            <a href="https://github.com/adeemharis/NILM" target="_blank" rel="noopener" class="work-link">
+                                [GitHub Repository ↗]
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======= Projects ======= -->
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="section-title">Projects</h2>
+
+                <div class="work-list">
+                    <!-- Project 1: CUDA Acceleration -->
+                    <article class="work-item">
+                        <div class="work-header">
+                            <h3 class="work-title">Accelerated Deep Learning Inference Pipeline</h3>
+                            <span class="work-meta">C++ / CUDA / HPC</span>
+                        </div>
+                        <p class="work-summary">
+                            Benchmarked and profiled the Frugally-Deep header-only C++ library used for forward-pass execution of Keras models.
+                            Identified that approximately 70% of execution time was spent in convolution and matrix multiplication layers.
+                            Designed custom CUDA kernels using shared memory tiling to offload and accelerate these operations on GPU hardware.
+                        </p>
+                        <div class="work-footer">
+                            <div class="work-tech">
+                                <span class="tech-chip">C++</span>
+                                <span class="tech-chip">CUDA</span>
+                                <span class="tech-chip">GPU Optimization</span>
+                                <span class="tech-chip">Profiling</span>
+                            </div>
+                            <a href="https://github.com/adeemharis/frugally-deep" target="_blank" rel="noopener" class="work-link">
+                                [GitHub Repository ↗]
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: Silicosis Detection -->
+                    <article class="work-item">
+                        <div class="work-header">
+                            <h3 class="work-title">Thoracic Anomaly Detection from Chest Radiographs</h3>
+                            <span class="work-meta">PyTorch / Transfer Learning / Healthcare AI</span>
+                        </div>
+                        <p class="work-summary">
+                            Built a deep learning model to detect 29 distinct pulmonary conditions (including silicosis, tuberculosis, and other anomalies)
+                            from chest X-ray images. Used transfer learning with a pre-trained ResNet-101 architecture on the VinDr-CXR dataset,
+                            incorporating preprocessing and data augmentation to handle imbalanced label distributions.
+                        </p>
+                        <div class="work-footer">
+                            <div class="work-tech">
+                                <span class="tech-chip">Python</span>
+                                <span class="tech-chip">PyTorch</span>
+                                <span class="tech-chip">ResNet-101</span>
+                                <span class="tech-chip">Computer Vision</span>
+                            </div>
+                            <a href="https://github.com/adeemharis/silico" target="_blank" rel="noopener" class="work-link">
+                                [GitHub Repository ↗]
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project 3: Video Streaming Platform -->
+                    <article class="work-item">
+                        <div class="work-header">
+                            <h3 class="work-title">Video Streaming Platform with Graph Recommendations</h3>
+                            <span class="work-meta">Full-Stack &amp; Graph Databases</span>
+                        </div>
+                        <p class="work-summary">
+                            Full-featured video streaming platform built with MongoDB, Express, React, and Node.js. Integrated a Neo4j graph database
+                            to recommend videos by traversing viewing patterns and user interaction graphs, backed by RESTful APIs for video streaming
+                            and upload management.
+                        </p>
+                        <div class="work-footer">
+                            <div class="work-tech">
+                                <span class="tech-chip">Node.js</span>
+                                <span class="tech-chip">Neo4j</span>
+                                <span class="tech-chip">MongoDB</span>
+                                <span class="tech-chip">React</span>
+                            </div>
+                            <a href="https://github.com/adeemharis/video-streaming" target="_blank" rel="noopener" class="work-link">
+                                [GitHub Repository ↗]
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project 4: RideMate -->
+                    <article class="work-item">
+                        <div class="work-header">
+                            <h3 class="work-title">RideMate Ride-Sharing Application</h3>
+                            <span class="work-meta">Flutter / Mobile Systems</span>
+                        </div>
+                        <p class="work-summary">
+                            Developed rider and driver mobile applications for a campus-focused ride-sharing startup. Implemented Firebase
+                            authentication, real-time map routing using the OpenStreetMap API, and ride confirmation dialogs.
+                        </p>
+                        <div class="work-footer">
+                            <div class="work-tech">
+                                <span class="tech-chip">Flutter</span>
+                                <span class="tech-chip">Dart</span>
+                                <span class="tech-chip">Firebase</span>
+                                <span class="tech-chip">OpenStreetMap</span>
+                            </div>
+                            <a href="https://github.com/adeemharis/ridemate" target="_blank" rel="noopener" class="work-link">
+                                [GitHub Repository ↗]
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======= Writing ======= -->
+        <section id="writing" class="section">
+            <div class="container">
+                <h2 class="section-title">Writing</h2>
+                <p style="font-size: var(--text-base); color: var(--text-secondary); max-width: var(--prose-max-width); margin-bottom: var(--space-8);">
+                    Notes and write-ups on things I work on or explore.
+                </p>
+
+                <div class="articles-list">
+                    <!-- Note 1 -->
+                    <article class="article-card">
+                        <div class="article-card-meta">
+                            <span><time datetime="2026-04-12">April 12, 2026</time></span>
+                            <span>•</span>
+                            <span class="article-card-category">High Performance Computing</span>
+                            <span>•</span>
+                            <span>6 min read</span>
+                        </div>
+                        <h3 class="article-card-title">
+                            <a href="articles/accelerating-deep-learning-cuda.html">Benchmarking &amp; Accelerating Deep Learning Inference with CUDA</a>
+                        </h3>
+                        <p class="article-card-excerpt">
+                            A technical breakdown of forward-pass bottlenecks in header-only C++ inference libraries, profiling execution profiles, and writing custom GPU kernels for compute-heavy layers.
+                        </p>
+                        <div class="article-card-footer">
+                            <div style="display: flex; gap: var(--space-2); flex-wrap: wrap;">
+                                <span class="tech-chip">CUDA</span>
+                                <span class="tech-chip">C++</span>
+                                <span class="tech-chip">GPU</span>
+                            </div>
+                            <span class="article-read-more">Read note →</span>
+                        </div>
+                    </article>
+
+                    <!-- Note 2 -->
+                    <article class="article-card">
+                        <div class="article-card-meta">
+                            <span><time datetime="2026-08-20">August 20, 2026</time></span>
+                            <span>•</span>
+                            <span class="article-card-category">AI Security</span>
+                            <span>•</span>
+                            <span>8 min read</span>
+                        </div>
+                        <h3 class="article-card-title">
+                            <a href="articles/scoped-enterprise-ai-agent-authentication.html">Designing Scoped Credential Systems for Enterprise AI Agents</a>
+                        </h3>
+                        <p class="article-card-excerpt">
+                            An architectural pattern for short-lived, permission-bound credential brokers that prevent privilege escalation in autonomous agentic pipelines.
+                        </p>
+                        <div class="article-card-footer">
+                            <div style="display: flex; gap: var(--space-2); flex-wrap: wrap;">
+                                <span class="tech-chip">AI Security</span>
+                                <span class="tech-chip">OAuth2</span>
+                                <span class="tech-chip">PAM</span>
+                            </div>
+                            <span class="article-read-more">Read note →</span>
+                        </div>
+                    </article>
+                </div>
+
+                <div style="margin-top: var(--space-8);">
+                    <a href="blogs.html" class="badge-pill" style="font-size: var(--text-sm); padding: 0.5rem 1rem;">
+                        <span class="material-icons-outlined" style="font-size: 16px;">article</span>
+                        View all writing →
                     </a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ======= Experience ======= -->
-    <section id="experience" class="section section-alt">
-        <div class="container">
-            <div class="section-ornament ornament-tr">LOG: EXEC_TRACE</div>
-            <div class="section-ornament ornament-bl">PTR: 0x7FFD</div>
-            <h2 class="section-title reveal"><span class="data-tag">Experience</span></h2>
-            <div class="timeline reveal">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">Sep 2025 — Present</div>
-                    <div class="timeline-card">
-                        <div class="timeline-header">
-                            <h3>Technical Lead — GenAI</h3>
-                            <span class="timeline-company">HCLTech · Hyderabad, India</span>
+        <!-- ======= Contact ======= -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title">Contact</h2>
+                <p style="font-size: var(--text-base); color: var(--text-secondary); max-width: var(--prose-max-width);">
+                    Feel free to reach out via email or connect on LinkedIn and GitHub.
+                </p>
+
+                <div class="contact-grid">
+                    <a href="mailto:adeemharis@gmail.com" class="contact-card">
+                        <span class="material-icons-outlined contact-card-icon">mail</span>
+                        <div>
+                            <span class="contact-card-label">Email</span>
+                            <span class="contact-card-val">adeemharis@gmail.com</span>
                         </div>
-                        <ul class="timeline-details">
-                            <li>Working for Western Union, one of the major financial services companies globally.</li>
-                            <li>Led AI Code Review Project as part of AI Transformation Projects, automating code review
-                                using LLMs.</li>
-                            <li>Created Solana Stablecoin DApp as a POC to extend cross-border payment capabilities.
-                            </li>
-                            <li>Completed GenAI Training covering RAGs, Prompt Engineering, Agentic AI, and Foundational
-                                Models.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">May 2024 — Jul 2024</div>
-                    <div class="timeline-card">
-                        <div class="timeline-header">
-                            <h3>Machine Learning Intern</h3>
-                            <span class="timeline-company">Weya.AI · Remote</span>
+                    </a>
+
+                    <a href="https://github.com/adeemharis" target="_blank" rel="noopener" class="contact-card">
+                        <span class="material-icons-outlined contact-card-icon">code</span>
+                        <div>
+                            <span class="contact-card-label">GitHub</span>
+                            <span class="contact-card-val">@adeemharis</span>
                         </div>
-                        <ul class="timeline-details">
-                            <li>Led a project in a fast-paced startup, managing the entire product design lifecycle for
-                                client deliverables.</li>
-                            <li>Designed and implemented a complete end-to-end ML pipeline for energy disaggregation —
-                                from data collection to cloud deployment.</li>
-                            <li>Conducted research on GANs, VAEs, and state-of-the-art NILM approaches, optimizing
-                                architectures for deployments in Brazil.</li>
-                            <li>Collaborated with stakeholders and data engineers to define data requirements and ensure
-                                seamless ML integration.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                    </a>
 
-    <!-- ======= Education ======= -->
-    <section id="education" class="section">
-        <div class="container">
-            <div class="section-ornament ornament-tr">EDU_MODEL_V4</div>
-            <h2 class="section-title reveal"><span class="data-tag">Education</span></h2>
-            <div class="education-grid reveal">
-                <div class="edu-card" data-tilt data-tilt-max="3" data-tilt-speed="600">
-                    <div class="edu-icon">
-                        <span class="material-icons-outlined">school</span>
-                    </div>
-                    <div class="edu-content">
-                        <h3>Indian Institute of Technology Jodhpur</h3>
-                        <p class="edu-degree">B.Tech — Artificial Intelligence & Data Science</p>
-                        <p class="edu-minor">Minor in Mathematical & Computational Economics</p>
-                        <span class="edu-date">Dec 2021 — May 2025</span>
-                    </div>
-                </div>
-                <div class="edu-card">
-                    <div class="edu-icon">
-                        <span class="material-icons-outlined">menu_book</span>
-                    </div>
-                    <div class="edu-content">
-                        <h3>Abhinav Public School, Pitampura</h3>
-                        <p class="edu-degree">High School — Science</p>
-                        <p class="edu-minor">Grade: 95% · A grade in Math, Physics, CS & English (CBSE AISSCE)</p>
-                        <span class="edu-date">May 2019 — May 2021</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ======= Skills ======= -->
-    <section id="skills" class="section section-alt">
-        <div class="container">
-            <div class="section-ornament ornament-tr">FEAT_VEC_PROX</div>
-            <h2 class="section-title reveal"><span class="data-tag">Skills</span></h2>
-            <div class="skills-grid reveal">
-                <div class="skill-category">
-                    <h3><span class="material-icons-outlined">terminal</span> Programming Languages</h3>
-                    <div class="skill-chips">
-                        <span class="chip">C++</span>
-                        <span class="chip">Java</span>
-                        <span class="chip">Python</span>
-                        <span class="chip">JavaScript</span>
-                        <span class="chip">Go</span>
-                        <span class="chip">R</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3><span class="material-icons-outlined">language</span> Web Technologies</h3>
-                    <div class="skill-chips">
-                        <span class="chip">Node.js</span>
-                        <span class="chip">React.js</span>
-                        <span class="chip">Express.js</span>
-                        <span class="chip">Django</span>
-                        <span class="chip">Angular</span>
-                        <span class="chip">Flask</span>
-                        <span class="chip">FastAPI</span>
-                        <span class="chip">GraphQL</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3><span class="material-icons-outlined">psychology</span> Data Science & ML</h3>
-                    <div class="skill-chips">
-                        <span class="chip">PyTorch</span>
-                        <span class="chip">Scikit-Learn</span>
-                        <span class="chip">TensorFlow</span>
-                        <span class="chip">HuggingFace</span>
-                        <span class="chip">Pandas</span>
-                        <span class="chip">NumPy</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3><span class="material-icons-outlined">storage</span> Database Systems</h3>
-                    <div class="skill-chips">
-                        <span class="chip">MySQL</span>
-                        <span class="chip">MongoDB</span>
-                        <span class="chip">PostgreSQL</span>
-                        <span class="chip">Elasticsearch</span>
-                        <span class="chip">Redis</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3><span class="material-icons-outlined">cloud</span> Cloud & DevOps</h3>
-                    <div class="skill-chips">
-                        <span class="chip">AWS</span>
-                        <span class="chip">Microsoft Azure</span>
-                        <span class="chip">GCP</span>
-                        <span class="chip">Firebase</span>
-                        <span class="chip">Docker</span>
-                        <span class="chip">Vercel</span>
-                        <span class="chip">Git</span>
-                        <span class="chip">MLflow</span>
-                        <span class="chip">CI/CD</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3><span class="material-icons-outlined">memory</span> Specialized</h3>
-                    <div class="skill-chips">
-                        <span class="chip">HPC</span>
-                        <span class="chip">CUDA</span>
-                        <span class="chip">Parallel Processing</span>
-                        <span class="chip">Embedded Systems</span>
-                        <span class="chip">MATLAB</span>
-                        <span class="chip">RStudio</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ======= Projects ======= -->
-    <section id="projects" class="section">
-        <div class="container">
-            <div class="section-ornament ornament-tr">BUILD_0101</div>
-            <h2 class="section-title reveal"><span class="data-tag">Featured Projects</span></h2>
-            <div class="projects-grid reveal">
-                <div class="project-card" data-tilt data-tilt-max="4" data-tilt-speed="600" data-tilt-glare
-                    data-tilt-max-glare="0.05">
-                    <div class="project-header">
-                        <span class="material-icons-outlined project-icon">play_circle</span>
-                        <div class="project-links">
-                            <a href="#" aria-label="GitHub"><span class="material-icons-outlined">code</span></a>
+                    <a href="https://www.linkedin.com/in/adeemharis/" target="_blank" rel="noopener" class="contact-card">
+                        <span class="material-icons-outlined contact-card-icon">link</span>
+                        <div>
+                            <span class="contact-card-label">LinkedIn</span>
+                            <span class="contact-card-val">adeemharis</span>
                         </div>
-                    </div>
-                    <h3>Video Streaming Platform</h3>
-                    <p>Full-featured video streaming platform using the MERN stack. Integrated Neo4j graph database for
-                        advanced recommendation features using graph traversal algorithms.</p>
-                    <div class="project-tags">
-                        <span>Node.js</span><span>MongoDB</span><span>React.js</span><span>Neo4j</span>
-                    </div>
+                    </a>
                 </div>
-                <div class="project-card" data-tilt data-tilt-max="4" data-tilt-speed="600" data-tilt-glare
-                    data-tilt-max-glare="0.05">
-                    <div class="project-header">
-                        <span class="material-icons-outlined project-icon">directions_car</span>
-                        <div class="project-links">
-                            <a href="#" aria-label="GitHub"><span class="material-icons-outlined">code</span></a>
-                        </div>
-                    </div>
-                    <h3>RideMate Application</h3>
-                    <p>Ride-sharing application for a college startup with User and Driver apps. Features real-time map
-                        view, Firebase Auth, ride-sharing functionality, and driver assignment notifications.</p>
-                    <div class="project-tags">
-                        <span>Flutter</span><span>Firebase</span><span>Dart</span><span>OpenStreetMap</span>
-                    </div>
-                </div>
-                <div class="project-card" data-tilt data-tilt-max="4" data-tilt-speed="600" data-tilt-glare
-                    data-tilt-max-glare="0.05">
-                    <div class="project-header">
-                        <span class="material-icons-outlined project-icon">biotech</span>
-                        <div class="project-links">
-                            <a href="#" aria-label="GitHub"><span class="material-icons-outlined">code</span></a>
-                        </div>
-                    </div>
-                    <h3>Silicosis Detection from X-rays</h3>
-                    <p>Deep learning model for detecting 29 distinct lung anomalies including silicosis and tuberculosis
-                        from chest X-ray images using transfer learning with ResNet-101.</p>
-                    <div class="project-tags">
-                        <span>Python</span><span>PyTorch</span><span>ResNet-101</span><span>Transfer Learning</span>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-header">
-                        <span class="material-icons-outlined project-icon">speed</span>
-                        <div class="project-links">
-                            <a href="#" aria-label="GitHub"><span class="material-icons-outlined">code</span></a>
-                        </div>
-                    </div>
-                    <h3>Accelerated Deep Learning</h3>
-                    <p>Accelerated Frugally-Deep, a C++ header library for forward pass in Keras models. Benchmarked and
-                        identified bottleneck functions taking 70% of compute, optimized with GPU programming.</p>
-                    <div class="project-tags">
-                        <span>C++</span><span>CUDA</span><span>GPU Programming</span><span>HPC</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- ======= Achievements ======= -->
-    <section id="achievements" class="section section-alt">
-        <div class="container">
-            <div class="section-ornament ornament-tr">RANK_TOP_1P</div>
-            <h2 class="section-title reveal"><span class="data-tag">Achievements</span></h2>
-            <div class="achievements-grid reveal">
-                <div class="achievement-card" data-tilt data-tilt-max="4" data-tilt-speed="600">
-                    <div class="achievement-rank">AIR 468</div>
-                    <h3>GATE CS & IT 2024</h3>
-                    <p>Among 123,967 candidates</p>
-                    <span class="achievement-org">IISc Bangalore</span>
-                </div>
-                <div class="achievement-card">
-                    <div class="achievement-rank">AIR 168</div>
-                    <h3>GATE DA & AI 2024</h3>
-                    <p>Among 59,210 candidates</p>
-                    <span class="achievement-org">IISc Bangalore</span>
-                </div>
-                <div class="achievement-card">
-                    <div class="achievement-rank">Fellow</div>
-                    <h3>KVPY SA 2019</h3>
-                    <p>AIR 864</p>
-                    <span class="achievement-org">IISc Bangalore</span>
-                </div>
-                <div class="achievement-card">
-                    <div class="achievement-rank">AIR 3716</div>
-                    <h3>JEE Advanced 2021</h3>
-                    <p>Among a million candidates</p>
-                    <span class="achievement-org">IIT Kharagpur</span>
+                <div class="contact-resume">
+                    <a href="Resume_Adeem_IITD.pdf" target="_blank" rel="noopener" class="contact-resume-btn">
+                        <span class="material-icons-outlined">download</span>
+                        Download CV
+                    </a>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- ======= Blog Teaser ======= -->
-    <section id="blog" class="section">
-        <div class="container">
-            <h2 class="section-title reveal">Latest Articles</h2>
-            <div class="blog-teaser-grid reveal" id="blogTeaserGrid">
-                <!-- Latest 2 posts rendered dynamically -->
-            </div>
-            <p class="blog-empty hidden" id="blogEmpty">No articles published yet. Check back soon!</p>
-            <div class="blog-teaser-cta reveal">
-                <a href="blogs.html" class="btn btn-primary">
-                    <span class="material-icons-outlined">article</span> View All Articles
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ======= Contact ======= -->
-    <section id="contact" class="section section-alt">
-        <div class="container">
-            <h2 class="section-title reveal">Let's Connect</h2>
-            <div class="contact-grid reveal">
-                <div class="contact-info">
-                    <p>Have a project in mind or want to discuss opportunities? I'm always open to interesting
-                        conversations.</p>
-                    <div class="contact-links">
-                        <a href="mailto:adeemharis@gmail.com" class="contact-link">
-                            <span class="material-icons-outlined">mail</span>
-                            <div>
-                                <span class="contact-link-label">Email</span>
-                                <span class="contact-link-value">adeemharis@gmail.com</span>
-                            </div>
-                        </a>
-                        <a href="https://github.com/adeemharis" target="_blank" rel="noopener" class="contact-link">
-                            <span class="material-icons-outlined">code</span>
-                            <div>
-                                <span class="contact-link-label">GitHub</span>
-                                <span class="contact-link-value">adeemharis</span>
-                            </div>
-                        </a>
-                        <a href="tel:+917838284514" class="contact-link">
-                            <span class="material-icons-outlined">phone</span>
-                            <div>
-                                <span class="contact-link-label">Phone</span>
-                                <span class="contact-link-value">+91-7838284514</span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <form class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <label for="contactName">Name</label>
-                        <input type="text" id="contactName" placeholder="Your name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="contactEmail">Email</label>
-                        <input type="email" id="contactEmail" placeholder="your@email.com" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="contactMessage">Message</label>
-                        <textarea id="contactMessage" rows="5" placeholder="Tell me about your project..."
-                            required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-full">
-                        <span class="material-icons-outlined">send</span> Send Message
-                    </button>
-                </form>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- ======= Footer ======= -->
     <footer id="footer">
-        <div class="container">
-            <div class="footer-content">
-                <a href="#hero" class="footer-logo">AH<span class="accent">.</span></a>
-                <div class="footer-links">
-                    <a href="#about">About</a>
-                    <a href="#experience">Experience</a>
-                    <a href="#projects">Projects</a>
-                    <a href="blogs.html">Blog</a>
-                    <a href="#contact">Contact</a>
-                </div>
-                <div class="footer-social">
-                    <a href="mailto:adeemharis@gmail.com" aria-label="Email"><span
-                            class="material-icons-outlined">mail</span></a>
-                    <a href="https://github.com/adeemharis" target="_blank" rel="noopener" aria-label="GitHub"><span
-                            class="material-icons-outlined">code</span></a>
-                </div>
+        <div class="container footer-content">
+            <div class="footer-colophon">
+                Adeem Haris · 2026
             </div>
-            <div class="footer-bottom">
-                <p>© 2025 Adeem Haris. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#about">About</a>
+                <a href="#education">Education</a>
+                <a href="#interests">Interests</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="blogs.html">Writing</a>
+                <a href="Resume_Adeem_IITD.pdf" target="_blank" rel="noopener">Resume</a>
             </div>
         </div>
-        <!-- Scripts -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
-        <script src="script.js"></script>
+    </footer>
+
+    <!-- Client Interactions -->
+    <script src="script.js"></script>
 </body>
 
 </html>
